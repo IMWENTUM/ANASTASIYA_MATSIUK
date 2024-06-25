@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N.03 ANKETA</title>
+</head>
+
+<body>
+    
+    <script>
+
+        let surname = prompt ('Введите Вашу фамилию:');
+        let name = prompt ('Введите Ваше имя:');
+        let patronymic = prompt ('Введите Ваше отчество:');
+        let age = parseInt(prompt ('Введите Ваш возраст:'));
+        
+        let days = Number(age) * 365;
+        let future = Number(age) + 5;
+
+        let gender = confirm ('Ваш пол - мужской?');
+
+        if (gender === true) {
+            gender = ('мужской');
+        } 
+        else {
+            gender = ('женский');
+        }
+
+        let pension;
+
+        if (gender === ('мужской') && age >= 63){
+            pension = ('да');
+        }
+        else if (gender === ('женский') && age >= 58){
+            pension = ('да');
+        }
+        else{
+            pension = ('нет');
+        }
+
+
+        console.log = alert('Ваше ФИО: ' + surname + ' ' + name + ' ' + patronymic + '\n' 
+        + 'Ваш возраст в годах: ' + parseInt(age) + '\n' 
+        + 'Ваш возраст в днях: ' + days + '\n'
+        + 'Через 5 лет Вам будет: ' + future + '\n'
+        + 'Ваш пол: ' + gender + '\n'
+        + 'Вы на пенсии: ' + pension);
+    </script>
+
+</body>
+
+</html>
