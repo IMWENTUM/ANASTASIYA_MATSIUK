@@ -18,16 +18,19 @@
       1, 8
     ];
 
-    const nested = arr.flat(Infinity);
-
-    function treeSum(nested, index) {
-      if (index === nested.length) {
-        return 0;
+    function treeSum(arr){
+      let sum = 0;
+      for(let i = 0; i < arr.length; i++){
+        if(Array.isArray(arr[i])){
+          sum+=treeSum(arr[i]);
+        } else{
+          sum+=arr[i];
+        }
       }
-      return nested[index] + treeSum(nested, index + 1);
+      return sum;
     }
 
-    console.log(treeSum(nested, 0));
+    console.log(treeSum(arr));
 
   </script>
   
