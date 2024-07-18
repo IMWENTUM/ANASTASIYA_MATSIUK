@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOWELS</title>
+</head>
+
+<body>
+
+    <script>
+                
+        function VOWELS(str){
+	        
+			str = str.toLowerCase();
+        
+        const vowels = 'ауоыиэяюёе';
+		let sum = 0;
+
+			for (var i = 0; i < str.length; i++){
+				if (vowels.indexOf(str[i]) !== -1){
+					sum++;
+				}			
+			}
+    			return sum;
+		}
+
+	const str = prompt('Введите Ваш текст!');
+
+	console.log('В Вашем тексте ' + VOWELS(str) + ' гласных.');
+
+    </script>
+
+</body>
+
+</html>
